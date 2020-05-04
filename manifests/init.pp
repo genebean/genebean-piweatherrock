@@ -12,7 +12,9 @@ class piweatherrock (
   unless ($facts['os']['name'] == 'Debian') and
     ($facts['os']['distro']['id'] == 'Raspbian') and
     (versioncmp($facts['os']['release']['major'], '10') == 0) {
-    notice('This manifest has only been tested Raspbian 10 (buster)')
+      notify {'Untested OS':
+        message => 'This manifest has only been tested Raspbian 10 (buster)',
+      }
   }
 
   $main_packages = [
@@ -43,7 +45,7 @@ class piweatherrock (
     ],
   }
 
-  unless $facts['os']['hardware'] == 'x86_64' {
+  if $facts['os']['hardware'] =~ /^arm/ {
     $non_x86_packages = [ 'realvnc-vnc-server', ]
     package { $non_x86_packages:
       ensure          => latest,
@@ -116,7 +118,10 @@ class piweatherrock (
 
   python::pip { $python_packages:
     pip_provider => 'pip3',
-    require      => Package[ $main_packages, $piweatherrock_packages, ],
+    require      => Package[
+      $main_packages,
+      $piweatherrock_packages,
+    ],
   }
 
   # Run upgrade script to import current config values to new config file
