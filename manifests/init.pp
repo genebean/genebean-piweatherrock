@@ -129,7 +129,9 @@ class piweatherrock (
   }
 
   systemd::unit_file { 'PiWeatherRock.service':
-    source  => 'file:///home/pi/PiWeatherRock/PiWeatherRock.service',
+    content => epp('piweatherrock/PiWeatherRock.service.epp', {
+      'config_file' => $config_file,
+    }),
     require => Python::Pip[$python_packages],
     notify  => Service['PiWeatherRock.service'],
   }
@@ -147,7 +149,9 @@ class piweatherrock (
   }
 
   systemd::unit_file { 'PiWeatherRockConfig.service':
-    source  => 'file:///home/pi/PiWeatherRock/PiWeatherRockConfig.service',
+    content => epp('piweatherrock/PiWeatherRockConfig.service.epp', {
+      'config_file' => $config_file,
+    }),
     require => Python::Pip[$python_packages],
     notify  => Service['PiWeatherRockConfig.service'],
   }
