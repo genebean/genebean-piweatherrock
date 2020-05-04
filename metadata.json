@@ -1,0 +1,30 @@
+{
+  "name": "genebean-piweatherrock",
+  "version": "0.1.0",
+  "author": "Gene Liverman",
+  "summary": "Install and configure PiWeatherRock",
+  "license": "BSD-3-Clause",
+  "source": "https://github.com/genebean/genebean-piweatherrock.git",
+  "project_page": "https://github.com/genebean/genebean-piweatherrock",
+  "issues_url": "https://github.com/genebean/genebean-piweatherrock/issues",
+  "dependencies": [
+
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "10"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.10.0 < 7.0.0"
+    }
+  ],
+  "pdk-version": "1.17.0",
+  "template-url": "pdk-default#1.17.0",
+  "template-ref": "tags/1.17.0-0-gd3a4319"
+}
