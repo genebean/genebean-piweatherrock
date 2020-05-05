@@ -1,9 +1,22 @@
-# @summary A short summary of the purpose of this class
+# @summary Installs and configures PiWeatherRock
 #
-# A description of what this class does
+# Installs and configures PiWeatherRock
 #
-# @example
-#   include piweatherrock::foo
+# @example Defaults
+#   include piweatherrock
+#
+# @example Use an alternate config file
+#   class { 'piweatherrock':
+#     config_file => '/home/pi/piweatherrock.json',
+#   }
+#
+# @param [Boolean] enable_awesome_desktop
+#   If using Raspbian Lite you may want to enable this so that you have a lite
+#   weight desktop and terminal
+#
+# @param [Stdlib::Unixpath] config_file
+#   The path to the config file for PiWeatherRock
+#
 class piweatherrock (
   Boolean $enable_awesome_desktop = false,
   Stdlib::Unixpath $config_file = '/home/pi/PiWeatherRock/config.json',
@@ -61,8 +74,6 @@ class piweatherrock (
     }
   }
 
-  # If using Raspbian Lite you may want to enable this so that you have a lite
-  # weight desktop and terminal
   if $enable_awesome_desktop {
     package { [ 'awesome', 'lxterminal', ]:
       ensure          => latest,

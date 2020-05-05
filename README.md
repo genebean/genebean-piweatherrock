@@ -1,89 +1,35 @@
 # genebean-piweatherrock
 
-Welcome to your new module. A short overview of the generated parts can be found in the PDK documentation at https://puppet.com/pdk/latest/pdk_generating_modules.html .
-
-The README template below provides a starting point with details about what information to include in your README.
-
-#### Table of Contents
+[![Gitter](https://badges.gitter.im/PiWeatherRock/community.svg)](https://gitter.im/PiWeatherRock/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+![](https://img.shields.io/puppetforge/pdk-version/genebean/piweatherrock.svg?style=popout)
+![](https://img.shields.io/puppetforge/v/genebean/piweatherrock.svg?style=popout)
+![](https://img.shields.io/puppetforge/dt/genebean/piweatherrock.svg?style=popout)
+[![Build Status](https://travis-ci.com/genebean/genebean-piweatherrock.svg?branch=master)](https://travis-ci.com/genebean/genebean-piweatherrock)
 
 - [Description](#description)
 - [Setup](#setup)
-  - [What genebean-piweatherrock affects **OPTIONAL**](#what-genebean-piweatherrock-affects-optional)
-  - [Setup Requirements **OPTIONAL**](#setup-requirements-optional)
-  - [Beginning with genebean-piweatherrock](#beginning-with-genebean-piweatherrock)
-- [Usage](#usage)
 - [Reference](#reference)
-- [Limitations](#limitations)
+- [Changelog](#changelog)
 - [Development](#development)
-- [Release Notes/Contributors/Etc. **Optional**](#release-notescontributorsetc-optional)
 
 ## Description
 
-Briefly tell users why they might want to use your module. Explain what your module does and what kind of problems users can solve with it.
+This module installs and configures [PiWeatherRock](https://piweatherrock.technicalissues.us) on a Raspberry Pi. Additional details are provide on the project website.
 
-This should be a fairly short description helps the user decide if your module is what they want.
+> **NOTE**: this module is actively evolving and may change over the next few weeks. I suggest waiting for v1 before using it.
 
 ## Setup
 
-### What genebean-piweatherrock affects **OPTIONAL**
-
-If it's obvious what your module touches, you can skip this section. For example, folks can probably figure out that your mysql_instance module affects their MySQL instances.
-
-If there's more that they should know about, though, this is the place to mention:
-
-* Files, packages, services, or operations that the module will alter, impact, or execute.
-* Dependencies that your module automatically installs.
-* Warnings or other important notices.
-
-### Setup Requirements **OPTIONAL**
-
-If your module requires anything extra before setting up (pluginsync enabled, another module, etc.), mention it here.
-
-If your most recent release breaks compatibility or requires particular steps for upgrading, you might want to include an additional "Upgrading" section here.
-
-### Beginning with genebean-piweatherrock
-
-The very basic steps needed for a user to get the module up and running. This can include setup steps, if necessary, or it can be an example of the most basic use of the module.
-
-## Usage
-
-Include usage examples for common use cases in the **Usage** section. Show your users how to use your module to solve problems, and be sure to include code examples. Include three to five examples of the most important or common tasks a user can accomplish with your module. Show users how to accomplish more complex tasks that involve different types, classes, and functions working in tandem.
+This module will install all the pre-requisites for PiWeatherRock, clone the repository that contains the core code, and create systemd services for the app and the web-based configuration utility. Right now the services assume that you have run `pip3 install -e .` from within the repository (this is not done for you). Soon this will transition to installing what currently is being cloned via PyPI.
 
 ## Reference
 
-This section is deprecated. Instead, add reference information to your code as Puppet Strings comments, and then use Strings to generate a REFERENCE.md in your module. For details on how to add code comments and generate documentation with Strings, see the Puppet Strings [documentation](https://puppet.com/docs/puppet/latest/puppet_strings.html) and [style guide](https://puppet.com/docs/puppet/latest/puppet_strings_style.html)
+This module is documented via `pdk bundle exec puppet strings generate --format markdown`. Please see [REFERENCE.md](REFERENCE.md) for more info.
 
-If you aren't ready to use Strings yet, manually create a REFERENCE.md in the root of your module directory and list out each of your module's classes, defined types, facts, functions, Puppet tasks, task plans, and resource types and providers, along with the parameters for each.
+## Changelog
 
-For each element (class, defined type, function, and so on), list:
-
-  * The data type, if applicable.
-  * A description of what the element does.
-  * Valid values, if the data type doesn't make it obvious.
-  * Default value, if any.
-
-For example:
-
-```
-### `pet::cat`
-
-#### Parameters
-
-##### `meow`
-
-Enables vocalization in your cat. Valid options: 'string'.
-
-Default: 'medium-loud'.
-```
-
-## Limitations
-
-In the Limitations section, list any incompatibilities, known issues, or other warnings.
+[CHANGELOG.md](CHANGELOG.md) is generated prior to each release via `pdk bundle exec rake changelog`. 
 
 ## Development
 
-In the Development section, tell other users the ground rules for contributing to your project and how they should submit their work.
-
-## Release Notes/Contributors/Etc. **Optional**
-
-If you aren't using changelog, put your release notes here (though you should consider using changelog). You can also add any additional sections you feel are necessary or important to include here. Please use the `## ` header.
+Pull requests are welcome!
