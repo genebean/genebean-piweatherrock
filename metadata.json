@@ -1,7 +1,7 @@
 {
   "name": "genebean-piweatherrock",
   "version": "0.1.0",
-  "author": "Gene Liverman",
+  "author": "genebean",
   "summary": "Install and configure PiWeatherRock",
   "license": "BSD-3-Clause",
   "source": "https://github.com/genebean/genebean-piweatherrock.git",
