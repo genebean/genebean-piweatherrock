@@ -6,6 +6,9 @@
 **Classes**
 
 * [`piweatherrock`](#piweatherrock): Installs and configures PiWeatherRock
+* [`piweatherrock::config`](#piweatherrockconfig): Handles the configuration steps for PiWeatherRock
+* [`piweatherrock::install`](#piweatherrockinstall): Handles the installation steps for PiWeatherRock
+* [`piweatherrock::service`](#piweatherrockservice): Manages services associated with PiWeatherRock
 
 ## Classes
 
@@ -49,4 +52,48 @@ Data type: `Stdlib::Unixpath`
 The path to the config file for PiWeatherRock
 
 Default value: '/home/pi/PiWeatherRock/config.json'
+
+##### `piweatherrock_version`
+
+Data type: `String[1]`
+
+The version of piweatherrock to install from PyPI
+
+Default value: '2.0.0.dev7'
+
+##### `sample_config_file`
+
+Data type: `Stdlib::Unixpath`
+
+
+
+Default value: '/usr/local/lib/python3.7/dist-packages/piweatherrock/config.json-sample'
+
+##### `user`
+
+Data type: `String[1]`
+
+
+
+Default value: 'pi'
+
+##### `group`
+
+Data type: `String[1]`
+
+
+
+Default value: 'pi'
+
+### piweatherrock::config
+
+Handles the configuration steps for PiWeatherRock
+
+### piweatherrock::install
+
+Handles the installation steps for PiWeatherRock
+
+### piweatherrock::service
+
+Manages services associated with PiWeatherRock
 
