@@ -9,9 +9,9 @@ After=network.target
 Type=simple
 User=pi
 Group=pi
-WorkingDirectory=/home/pi/PiWeatherRock
+WorkingDirectory=/home/pi
 Environment='DISPLAY=:0'
-ExecStart=/home/pi/PiWeatherRock/scripts/pwr-ui -c <%= $config_file %>
+ExecStart=/usr/local/bin/pwr-ui -c <%= $config_file %>
 Restart=always
 RestartSec=5
 

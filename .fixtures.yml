@@ -6,4 +6,3 @@ fixtures:
     python: 'puppet/python'
     stdlib: 'puppetlabs/stdlib'
     systemd: 'camptocamp/systemd'
-    vcsrepo: 'puppetlabs/vcsrepo'

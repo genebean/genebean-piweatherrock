@@ -19,10 +19,6 @@
     {
       "name": "puppetlabs/stdlib",
       "version_requirement": ">= 5.1.0 < 7.0.0"
-    },
-    {
-      "name": "puppetlabs/vcsrepo",
-      "version_requirement": ">= 3.1.0 < 4.0.0"
     }
   ],
   "operatingsystem_support": [
@@ -36,6 +32,12 @@
       "operatingsystem": "Raspbian",
       "operatingsystemrelease": [
         "10"
+      ]
+    },
+    {
+      "operatingsystem": "Darwin",
+      "operatingsystemrelease": [
+        "19"
       ]
     }
   ],
