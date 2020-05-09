@@ -53,27 +53,27 @@ The path to the config file for PiWeatherRock
 
 Default value: '/home/pi/PiWeatherRock/config.json'
 
+##### `sample_config_file`
+
+Data type: `Stdlib::Unixpath`
+
+The path to the sample config file that is bundled with PiWeatherRock
+
+Default value: '/usr/local/lib/python3.7/dist-packages/piweatherrock/config.json-sample'
+
 ##### `piweatherrock_version`
 
 Data type: `String[1]`
 
 The version of piweatherrock to install from PyPI
 
-Default value: '2.0.0.dev7'
-
-##### `sample_config_file`
-
-Data type: `Stdlib::Unixpath`
-
-
-
-Default value: '/usr/local/lib/python3.7/dist-packages/piweatherrock/config.json-sample'
+Default value: '2.0.0.dev8'
 
 ##### `user`
 
 Data type: `String[1]`
 
-
+The user who PiWeatherRock will run as
 
 Default value: 'pi'
 
@@ -81,7 +81,7 @@ Default value: 'pi'
 
 Data type: `String[1]`
 
-
+The group of the user who PiWeatherRock will run as.
 
 Default value: 'pi'
 

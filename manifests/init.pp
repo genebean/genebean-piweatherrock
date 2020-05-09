@@ -17,8 +17,17 @@
 # @param [Stdlib::Unixpath] config_file
 #   The path to the config file for PiWeatherRock
 #
+# @param [Stdlib::Unixpath] sample_config_file
+#   The path to the sample config file that is bundled with PiWeatherRock
+#
 # @param [String[1]] piweatherrock_version
 #    The version of piweatherrock to install from PyPI
+#
+# @param [String[1]] user
+#    The user who PiWeatherRock will run as
+#
+# @param [String[1]] group
+#    The group of the user who PiWeatherRock will run as.
 #
 class piweatherrock (
   Boolean $enable_awesome_desktop = false,
