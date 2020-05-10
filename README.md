@@ -11,6 +11,7 @@
 - [Reference](#reference)
 - [Changelog](#changelog)
 - [Development](#development)
+  - [Releasing](#releasing)
 
 ## Description
 
@@ -33,3 +34,41 @@ This module is documented via `pdk bundle exec puppet strings generate --format 
 ## Development
 
 Pull requests are welcome!
+
+### Releasing
+
+Run these commands:
+
+```bash
+git checkout master
+git pull
+git checkout release
+git rebase master
+git push
+pdk bundle exec rake module:bump:minor
+pdk bundle exec rake changelog
+pdk bundle exec puppet strings generate --format markdown
+```
+
+- Review the output of the last command to make sure there are no errors or warnings at the beginning of it.
+- Review any changes to `REFERENCE.md`
+- Review `CHANGELOG.md` for the following:
+  - nothing is uncategorized
+  - that the previous release's version number is still present.
+    If its been replaced a tag didn't get pushed last time.
+
+If all is well, run these commands:
+
+```bash
+git commit -a -m "Release prep for $(jq -r '.version' metadata.json)"
+git tag $(jq -r '.version' metadata.json)
+git push
+git push --tags
+hub pull-request
+pdk build
+read -s forgeapikey
+curl -H "User-Agent: curl-from-genebean" \
+-H "Authorization: Bearer $forgeapikey" \
+-H "Content-Type: application/json" \
+-d "{\"file\":\"$(base64 pkg/genebean-piweatherrock-$(jq -r '.version' metadata.json).tar.gz)\"}" https://forgeapi.puppet.com/v3/releases
+```
