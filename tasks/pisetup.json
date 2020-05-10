@@ -1,0 +1,16 @@
+{
+  "puppet_task_version": 1,
+  "supports_noop": false,
+  "description": "Do the initial setup of PiWeatherRock on a Raspberry Pi",
+  "parameters": {
+    "name": {
+      "description": "The name you wish your Pi to have",
+      "type": "String[1]"
+    },
+    "timezone": {
+      "description": "The time zone you want your Pi to use",
+      "type": "String[3]",
+      "default": "America/New_York"
+    }
+  }
+}

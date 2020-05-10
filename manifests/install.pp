@@ -49,6 +49,12 @@ class piweatherrock::install {
         }
       }
 
+      python::pip { ['setuptools', 'wheel', ]:
+        ensure       => present,
+        pip_provider => 'pip3',
+        before       => Python::Pip['piweatherrock'],
+      }
+
       python::pip { 'piweatherrock':
         ensure       => $piweatherrock::piweatherrock_version,
         pip_provider => 'pip3',
