@@ -10,6 +10,10 @@
 * [`piweatherrock::install`](#piweatherrockinstall): Handles the installation steps for PiWeatherRock
 * [`piweatherrock::service`](#piweatherrockservice): Manages services associated with PiWeatherRock
 
+**Tasks**
+
+* [`pisetup`](#pisetup): Do the initial setup of PiWeatherRock on a Raspberry Pi
+
 ## Classes
 
 ### piweatherrock
@@ -96,4 +100,26 @@ Handles the installation steps for PiWeatherRock
 ### piweatherrock::service
 
 Manages services associated with PiWeatherRock
+
+## Tasks
+
+### pisetup
+
+Do the initial setup of PiWeatherRock on a Raspberry Pi
+
+**Supports noop?** false
+
+#### Parameters
+
+##### `name`
+
+Data type: `String[1]`
+
+The name you wish your Pi to have
+
+##### `timezone`
+
+Data type: `String[3]`
+
+The time zone you want your Pi to use
 
