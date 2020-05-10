@@ -20,7 +20,7 @@ This module installs and configures [PiWeatherRock](https://piweatherrock.techni
 
 ## Setup
 
-This module will install all the pre-requisites for PiWeatherRock, clone the repository that contains the core code, and create systemd services for the app and the web-based configuration utility. Right now the services assume that you have run `pip3 install -e .` from within the repository (this is not done for you). Soon this will transition to installing what currently is being cloned via PyPI.
+This module will install PiWeatherRock from [PyPI](https://pypi.org/project/piweatherrock/), along with all its pre-requisites, and create systemd services for the app and the web-based configuration utility named `PiWeatherRock` and `PiWeatherRockConfig`, respectively.
 
 ## Reference
 
@@ -28,7 +28,7 @@ This module is documented via `pdk bundle exec puppet strings generate --format 
 
 ## Changelog
 
-[CHANGELOG.md](CHANGELOG.md) is generated prior to each release via `pdk bundle exec rake changelog`. 
+[CHANGELOG.md](CHANGELOG.md) is generated prior to each release via `pdk bundle exec rake changelog`.
 
 ## Development
 
