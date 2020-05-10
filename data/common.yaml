@@ -1,1 +1,2 @@
 ---
+{} # this is here so linters don't get mad about an empty file
