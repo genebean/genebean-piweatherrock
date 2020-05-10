@@ -1,0 +1,4 @@
+---
+name: 'piweatherrock'
+tasks:
+  - 'piweatherrock::pisetup'
