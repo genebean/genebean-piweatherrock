@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [0.5.0](https://github.com/genebean/genebean-piweatherrock/tree/0.5.0) (2020-05-11)
+
+[Full Changelog](https://github.com/genebean/genebean-piweatherrock/compare/0.4.0...0.5.0)
+
+### Added
+
+- Whitelist more tasks in project.yaml [\#12](https://github.com/genebean/genebean-piweatherrock/pull/12) ([genebean](https://github.com/genebean))
+- Add notes on release process [\#10](https://github.com/genebean/genebean-piweatherrock/pull/10) ([genebean](https://github.com/genebean))
+
 ## [0.4.0](https://github.com/genebean/genebean-piweatherrock/tree/0.4.0) (2020-05-10)
 
 [Full Changelog](https://github.com/genebean/genebean-piweatherrock/compare/0.3.0...0.4.0)
