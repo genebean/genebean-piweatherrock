@@ -12,6 +12,7 @@
 
 **Tasks**
 
+* [`migrate_from_git`](#migrate_from_git): Migrate from the git version of PiWeatherRock
 * [`pisetup`](#pisetup): Do the initial setup of PiWeatherRock on a Raspberry Pi
 
 ## Classes
@@ -55,7 +56,7 @@ Data type: `Stdlib::Unixpath`
 
 The path to the config file for PiWeatherRock
 
-Default value: '/home/pi/PiWeatherRock/config.json'
+Default value: '/home/pi/piweatherrock-config.json'
 
 ##### `sample_config_file`
 
@@ -71,7 +72,7 @@ Data type: `String[1]`
 
 The version of piweatherrock to install from PyPI
 
-Default value: '2.0.0.dev8'
+Default value: '2.0.0rc1'
 
 ##### `user`
 
@@ -102,6 +103,12 @@ Handles the installation steps for PiWeatherRock
 Manages services associated with PiWeatherRock
 
 ## Tasks
+
+### migrate_from_git
+
+Migrate from the git version of PiWeatherRock
+
+**Supports noop?** false
 
 ### pisetup
 

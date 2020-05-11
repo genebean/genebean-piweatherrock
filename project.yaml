@@ -1,6 +1,7 @@
 ---
 name: 'piweatherrock'
 tasks:
+  - 'piweatherrock::migrate_from_git'
   - 'piweatherrock::pisetup'
   - 'reboot'
   - 'reboot::last_boot_time'
