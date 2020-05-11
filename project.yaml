@@ -2,3 +2,6 @@
 name: 'piweatherrock'
 tasks:
   - 'piweatherrock::pisetup'
+  - 'reboot'
+  - 'reboot::last_boot_time'
+  - 'service'
