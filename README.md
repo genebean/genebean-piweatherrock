@@ -64,7 +64,7 @@ git commit -a -m "Release prep for $(jq -r '.version' metadata.json)"
 git tag $(jq -r '.version' metadata.json)
 git push
 git push --tags
-hub pull-request
+hub pull-request -l maintenance
 pdk build
 read -s forgeapikey
 curl -H "User-Agent: curl-from-genebean" \
