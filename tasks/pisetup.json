@@ -11,6 +11,11 @@
       "description": "The time zone you want your Pi to use",
       "type": "String[3]",
       "default": "America/New_York"
+    },
+    "awesomewm": {
+      "description": "Install awesome window manager",
+      "type": "Boolean",
+      "default": false
     }
   }
 }
