@@ -40,17 +40,17 @@ describe 'piweatherrock::config' do
         it {
           is_expected.to contain_exec('import config')
             .with_user('pi')
-            .with_command('pwr-config-upgrade -c /home/pi/PiWeatherRock/config.json -s /usr/local/lib/python3.7/dist-packages/piweatherrock/config.json-sample')
+            .with_command('pwr-config-upgrade -c /home/pi/piweatherrock-config.json -s /usr/local/lib/python3.7/dist-packages/piweatherrock/config.json-sample')
         }
 
         it {
           is_expected.to contain_systemd__unit_file('PiWeatherRock.service')
-            .with_content(%r{/home/pi/PiWeatherRock/config.json})
+            .with_content(%r{/home/pi/piweatherrock-config.json})
         }
 
         it {
           is_expected.to contain_systemd__unit_file('PiWeatherRockConfig.service')
-            .with_content(%r{/home/pi/PiWeatherRock/config.json})
+            .with_content(%r{/home/pi/piweatherrock-config.json})
         }
       end
     end
