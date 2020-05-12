@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [0.6.0](https://github.com/genebean/genebean-piweatherrock/tree/0.6.0) (2020-05-11)
+
+[Full Changelog](https://github.com/genebean/genebean-piweatherrock/compare/0.5.0...0.6.0)
+
+### Added
+
+- Allow installing awesomewm during Pi setup [\#15](https://github.com/genebean/genebean-piweatherrock/pull/15) ([genebean](https://github.com/genebean))
+- Create a migration task and update config location [\#14](https://github.com/genebean/genebean-piweatherrock/pull/14) ([genebean](https://github.com/genebean))
+
 ## [0.5.0](https://github.com/genebean/genebean-piweatherrock/tree/0.5.0) (2020-05-11)
 
 [Full Changelog](https://github.com/genebean/genebean-piweatherrock/compare/0.4.0...0.5.0)

@@ -130,3 +130,9 @@ Data type: `String[3]`
 
 The time zone you want your Pi to use
 
+##### `awesomewm`
+
+Data type: `Boolean`
+
+Install awesome window manager
+
