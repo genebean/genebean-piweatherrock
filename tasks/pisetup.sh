@@ -36,4 +36,8 @@ rm -rf /etc/puppet/code/modules/epel
 puppet module install genebean-piweatherrock
 
 # Setup PiWeatherRock itself
-puppet apply -e 'include piweatherrock'
+if [ "${PT_awesomewm}" == 'true' ]; then
+  puppet apply -e "class { 'piweatherrock': enable_awesome_desktop => true, }"
+else
+  puppet apply -e 'include piweatherrock'
+fi
