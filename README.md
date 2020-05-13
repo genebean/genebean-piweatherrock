@@ -15,9 +15,7 @@
 
 ## Description
 
-This module installs and configures [PiWeatherRock](https://piweatherrock.technicalissues.us) on a Raspberry Pi. Additional details are provide on the project website.
-
-> **NOTE**: this module is actively evolving and may change over the next few weeks. I suggest waiting for v1 before using it.
+This module installs and configures [PiWeatherRock](https://piweatherrock.technicalissues.us) on a Raspberry Pi. Additional details are provide on the project website in the "Getting started" section of the documentation.
 
 ## Setup
 
