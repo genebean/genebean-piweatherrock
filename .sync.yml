@@ -1,4 +1,7 @@
 ---
+.gitignore:
+  paths:
+    - '.rerun.json'
 .gitlab-ci.yml:
   delete: true
 appveyor.yml:
