@@ -32,8 +32,14 @@ puppet resource host ${NAME} ensure=present ip='127.0.0.1' target='/etc/hosts'
 # make sure the old version of epel isn't installed
 rm -rf /etc/puppet/code/modules/epel
 
-# Install this puppet module on the Pi
-puppet module install genebean-piweatherrock
+# Install the latest version of this puppet module on the Pi
+if [ "$(puppet module list |grep -c genebean-piweatherrock)" == "0" ]; then
+  echo 'installing genebean-piweatherrock'
+  puppet module install genebean-piweatherrock
+else
+  echo 'upgrading genebean-piweatherrock'
+  puppet module upgrade genebean-piweatherrock
+fi
 
 # Setup PiWeatherRock itself
 if [ "${PT_awesomewm}" == 'true' ]; then
