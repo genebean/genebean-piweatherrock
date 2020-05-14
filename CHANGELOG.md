@@ -2,7 +2,15 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
-## [1.2.0](https://github.com/genebean/genebean-piweatherrock/tree/1.2.0) (2020-05-13)
+## [1.3.0](https://github.com/genebean/genebean-piweatherrock/tree/1.3.0) (2020-05-14)
+
+[Full Changelog](https://github.com/genebean/genebean-piweatherrock/compare/1.2.0...1.3.0)
+
+### Added
+
+- Default to latest version of piweatherrock [\#32](https://github.com/genebean/genebean-piweatherrock/pull/32) ([genebean](https://github.com/genebean))
+
+## [1.2.0](https://github.com/genebean/genebean-piweatherrock/tree/1.2.0) (2020-05-14)
 
 [Full Changelog](https://github.com/genebean/genebean-piweatherrock/compare/1.1.0...1.2.0)
 
