@@ -72,7 +72,7 @@ Data type: `String[1]`
 
 The version of piweatherrock to install from PyPI
 
-Default value: '2.0.1'
+Default value: '2.1.0'
 
 ##### `user`
 
