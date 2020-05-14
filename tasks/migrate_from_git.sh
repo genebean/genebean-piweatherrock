@@ -36,3 +36,6 @@ fi
 
 # Setup PiWeatherRock itself
 puppet apply -e 'include piweatherrock'
+
+systemctl restart PiWeatherRock
+systemctl restart PiWeatherRockConfig
