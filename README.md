@@ -38,14 +38,14 @@ Pull requests are welcome!
 Run these commands:
 
 ```bash
-git checkout master
-git pull
-git checkout release
-git rebase master
-git push
-pdk bundle exec rake module:bump:minor
-pdk bundle exec rake changelog
-pdk bundle exec puppet strings generate --format markdown
+git checkout master \
+&& git pull \
+&& git checkout release \
+&& git rebase master \
+&& git push \
+&& pdk bundle exec rake module:bump:minor \
+&& pdk bundle exec rake changelog \
+&& pdk bundle exec puppet strings generate --format markdown
 ```
 
 - Review the output of the last command to make sure there are no errors or warnings at the beginning of it.
@@ -58,13 +58,15 @@ pdk bundle exec puppet strings generate --format markdown
 If all is well, run these commands:
 
 ```bash
-git commit -a -m "Release prep for $(jq -r '.version' metadata.json)"
-git tag $(jq -r '.version' metadata.json)
-git push
-git push --tags
-hub pull-request -l maintenance
-pdk build
+git commit -a -m "Release prep for $(jq -r '.version' metadata.json)" \
+&& git tag $(jq -r '.version' metadata.json) \
+&& git push \
+&& git push --tags \
+&& hub pull-request -l maintenance \
+&& pdk build
+
 read -s forgeapikey
+
 curl -H "User-Agent: curl-from-genebean" \
 -H "Authorization: Bearer $forgeapikey" \
 -H "Content-Type: application/json" \
