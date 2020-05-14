@@ -33,7 +33,7 @@ class piweatherrock (
   Boolean $enable_awesome_desktop = false,
   Stdlib::Unixpath $config_file = '/home/pi/piweatherrock-config.json',
   Stdlib::Unixpath $sample_config_file = '/usr/local/lib/python3.7/dist-packages/piweatherrock/config.json-sample',
-  String[1] $piweatherrock_version = '2.1.0',
+  String[1] $piweatherrock_version = 'latest',
   String[1] $user = 'pi',
   String[1] $group = 'pi',
 ) {
